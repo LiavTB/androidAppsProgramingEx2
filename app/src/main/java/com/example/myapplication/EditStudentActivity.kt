@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.repositories.StudentRepository
 
@@ -11,6 +12,10 @@ class EditStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_student)
+
+        // Set the toolbar title
+        val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
+        toolbarTitle.text = getString(R.string.edit_student_page_title)
 
         val studentId = intent.getStringExtra("student_id")
         val student = StudentRepository.getStudentById(studentId)

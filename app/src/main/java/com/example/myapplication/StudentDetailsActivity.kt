@@ -11,6 +11,10 @@ class StudentDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_details)
 
+        // Set the toolbar title
+        val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
+        toolbarTitle.text = getString(R.string.student_details_page_title)
+
         val studentId = intent.getStringExtra("student_id")
         val student = StudentRepository.getStudentById(studentId)
 

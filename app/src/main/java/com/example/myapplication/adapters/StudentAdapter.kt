@@ -1,9 +1,11 @@
 package com.example.myapplication.adapters
 
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
@@ -32,6 +34,7 @@ class StudentAdapter(
         private val phoneTextView: TextView = itemView.findViewById(R.id.studentPhone)
         private val addressTextView: TextView = itemView.findViewById(R.id.studentAddress)
         private val checkBox: CheckBox = itemView.findViewById(R.id.studentCheckBox)
+        private val pictureImageView: ImageView = itemView.findViewById(R.id.studentPicture)
 
         fun bind(student: Student, onItemClick: (Student) -> Unit) {
             nameTextView.text = student.name
@@ -42,6 +45,9 @@ class StudentAdapter(
             checkBox.setOnCheckedChangeListener { _, isChecked ->
                 student.isChecked = isChecked
             }
+            // Load the picture from the local file
+            val bitmap = BitmapFactory.decodeFile(student.pictureUrl)
+            pictureImageView.setImageBitmap(bitmap)
             itemView.setOnClickListener { onItemClick(student) }
         }
     }
