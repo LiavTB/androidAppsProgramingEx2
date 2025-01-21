@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="editTextStyle">@style/EditTextStyle</item>
+        <item name="textViewStyle">@style/TextViewStyle</item>
+        <item name="checkBoxStyle">@style/CheckBoxStyle</item>
+        <item name="buttonStyle">@style/ButtonStyle</item>
+        <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+</resources>
