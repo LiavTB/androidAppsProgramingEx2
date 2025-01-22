@@ -6,5 +6,5 @@ data class Student(
     var phone: String, // P hone number - string because the number starts with 0
     var address: String,
     var isChecked: Boolean = false,
-    var pictureUrl: String
+    var pictureUrl: String = "img.png"
 )

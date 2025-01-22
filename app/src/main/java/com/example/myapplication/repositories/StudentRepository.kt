@@ -8,8 +8,10 @@ object StudentRepository {
     fun getAllStudents(): List<Student> = students
 
     fun addStudent(student: Student) {
-        // TODO: check if student already exists
-        students.add(student)
+        val exists = students.any { it.id == student.id }
+        if (!exists) {
+            students.add(student)
+        }
     }
 
     fun updateStudent(student: Student) {
@@ -20,7 +22,10 @@ object StudentRepository {
     }
 
     fun deleteStudent(student: Student) {
-        students.remove(student)
+        val exists = students.any { it.id == student.id }
+        if (exists) {
+            students.remove(student)
+        }
     }
 
     fun getStudentById(id: String): Student? {

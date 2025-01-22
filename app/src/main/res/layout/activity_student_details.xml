@@ -9,91 +9,20 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-    <LinearLayout
-        style="@style/LinearLayoutOuterStyle"
-        android:layout_below="@id/toolbar">
+    <include layout="@layout/activity_student_common" />
 
-        <ImageView
-            android:id="@+id/studentPicture"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:contentDescription="@string/student_picture" />
-
-
-        <LinearLayout
-            style="@style/LinearLayoutInnerStyle">
-
-            <TextView
-                android:id="@+id/studentIdTitle"
-                style="@style/TextViewTitleStyle"
-                android:layout_width="wrap_content"
-                android:text="@string/student_id_title" />
-
-            <TextView
-                android:id="@+id/studentId"
-                style="@style/TextViewStyle"
-                android:text="{student_id}" />
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/LinearLayoutInnerStyle">
-
-            <TextView
-                android:id="@+id/studentNameTitle"
-                style="@style/TextViewTitleStyle"
-                android:layout_width="wrap_content"
-                android:text="@string/student_name_title" />
-
-            <TextView
-                android:id="@+id/studentName"
-                style="@style/TextViewStyle"
-                android:text="{student_name}" />
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/LinearLayoutInnerStyle">
-
-            <TextView
-                android:id="@+id/studentPhoneTitle"
-                style="@style/TextViewTitleStyle"
-                android:layout_width="wrap_content"
-                android:text="@string/student_phone_title" />
-
-            <TextView
-                android:id="@+id/studentPhone"
-                style="@style/TextViewStyle"
-                android:text="{student_phone}" />
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/LinearLayoutInnerStyle">
-
-            <TextView
-                android:id="@+id/studentAddressTitle"
-                style="@style/TextViewTitleStyle"
-                android:layout_width="wrap_content"
-                android:text="@string/student_address_title" />
-
-            <TextView
-                android:id="@+id/studentAddress"
-                style="@style/TextViewStyle"
-                android:text="{student_address}" />
-        </LinearLayout>
 
     <LinearLayout
-        style="@style/LinearLayoutInnerStyle">
+        style="@style/LinearLayoutOfButtonsStyle"
+        android:gravity="end">
 
-        <CheckBox
-            android:id="@+id/studentCheckBox"
-            style="@style/CheckBoxStyle"
-            android:text="@string/student_checked" />
+        <include
+            android:id="@+id/edit_button"
+            layout="@layout/edit_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
     </LinearLayout>
-    </LinearLayout>
 
-
-    <include
-        android:id="@+id/edit_button"
-        layout="@layout/edit_button_layout"
-         />
 
 </RelativeLayout>

@@ -28,4 +28,5 @@
     <string name="delete">DELETE</string>
     <string name="save">SAVE</string>
     <string name="student_picture">student picture</string>
+    <string name="edit">EDIT</string>
 </resources>

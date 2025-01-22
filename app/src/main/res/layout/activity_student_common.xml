@@ -1,0 +1,91 @@
+<!-- res/layout/activity_student_common.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        style="@style/LinearLayoutOuterStyle"
+        android:layout_below="@id/toolbar">
+
+        <ImageView
+            android:id="@+id/studentPicture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/student_picture" />
+
+        <LinearLayout
+            style="@style/LinearLayoutInnerStyle">
+
+            <TextView
+                android:id="@+id/studentIdTitle"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:text="@string/student_id_title" />
+
+            <EditText
+                android:id="@+id/studentId"
+                style="@style/EditTextStyle"
+                android:hint="@string/student_id_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutInnerStyle">
+
+            <TextView
+                android:id="@+id/studentNameTitle"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:text="@string/student_name_title" />
+
+            <EditText
+                android:id="@+id/studentName"
+                style="@style/EditTextStyle"
+                android:hint="@string/student_name_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutInnerStyle">
+
+            <TextView
+                android:id="@+id/studentPhoneTitle"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:text="@string/student_phone_title" />
+
+            <EditText
+                android:id="@+id/studentPhone"
+                style="@style/EditTextStyle"
+                android:hint="@string/student_phone_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutInnerStyle">
+
+            <TextView
+                android:id="@+id/studentAddressTitle"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:text="@string/student_address_title" />
+
+            <EditText
+                android:id="@+id/studentAddress"
+                style="@style/EditTextStyle"
+                android:hint="@string/student_address_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutInnerStyle">
+
+            <CheckBox
+                android:id="@+id/studentCheckBox"
+                style="@style/CheckBoxStyle"
+                android:text="@string/student_checked" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

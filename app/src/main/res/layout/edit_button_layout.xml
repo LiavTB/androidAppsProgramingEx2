@@ -1,7 +1,6 @@
-<com.google.android.material.button.MaterialButton
+<Button
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/edit_button"
-    android:style="@style/FloatingActionButtonStyle"
-    android:text="EDIT" />
+    android:id="@+id/saveButton"
+    style="@style/ButtonStyle"
+    android:text="@string/edit"
+    />

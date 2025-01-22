@@ -48,6 +48,7 @@ class StudentAdapter(
             // Load the picture from the local file
             val bitmap = BitmapFactory.decodeFile(student.pictureUrl)
             pictureImageView.setImageBitmap(bitmap)
+
             itemView.setOnClickListener { onItemClick(student) }
         }
     }

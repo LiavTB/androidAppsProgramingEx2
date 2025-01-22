@@ -3,8 +3,6 @@
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <item name="editTextStyle">@style/EditTextStyle</item>
-        <item name="textViewStyle">@style/TextViewStyle</item>
-        <item name="checkBoxStyle">@style/CheckBoxStyle</item>
         <item name="buttonStyle">@style/ButtonStyle</item>
         <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
     </style>
