@@ -1,27 +1,30 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import com.example.myapplication.R
 import com.example.myapplication.repositories.StudentRepository
+import com.example.myapplication.utils.Utils.setImageViewProfilePicture
 
 class StudentDetailsActivity : AppCompatActivity() {
+
+    override fun onResume() {
+        super.onResume()
+        // Refresh the data in the adapter
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_details)
-
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // Set the toolbar title
         val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
@@ -62,18 +65,20 @@ class StudentDetailsActivity : AppCompatActivity() {
             }
         }
 
-        // Load the picture from the local file
         val pictureImageView: ImageView = findViewById(R.id.studentPicture)
-        val bitmap = BitmapFactory.decodeFile(student?.pictureUrl)
-        if (bitmap != null) {
-            pictureImageView.setImageBitmap(bitmap)
-        }
+        // Load the picture from the constant image resource
+        setImageViewProfilePicture(pictureImageView)
 
         // Handle edit buttons
         findViewById<Button>(R.id.edit_button).setOnClickListener {
             val intent = Intent(this, EditStudentActivity::class.java)
             intent.putExtra("student_id", studentId)
             startActivity(intent)
+        }
+
+        val returnButton: ImageButton = findViewById(R.id.return_button)
+        returnButton.setOnClickListener {
+            finish()
         }
     }
 

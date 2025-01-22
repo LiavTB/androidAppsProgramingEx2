@@ -1,13 +1,15 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import com.example.myapplication.R
 import com.example.myapplication.models.Student
 import com.example.myapplication.repositories.StudentRepository
 
@@ -16,14 +18,13 @@ class NewStudentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_student)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-
         // Set the toolbar title
         val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
         toolbarTitle.text = getString(R.string.new_student_page_title)
+
+        // Set default image
+        val pictureImageView: ImageView = findViewById(R.id.studentPicture)
+        pictureImageView.setImageResource(R.drawable.img)
 
         val addButton: Button = findViewById(R.id.save_button)
         addButton.setOnClickListener {
@@ -38,6 +39,11 @@ class NewStudentActivity : AppCompatActivity() {
         }
         val cancelButton: Button = findViewById(R.id.cancel_button)
         cancelButton.setOnClickListener {
+            finish()
+        }
+
+        val returnButton: ImageButton = findViewById(R.id.return_button)
+        returnButton.setOnClickListener {
             finish()
         }
     }

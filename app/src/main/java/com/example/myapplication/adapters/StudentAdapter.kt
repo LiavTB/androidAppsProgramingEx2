@@ -1,6 +1,5 @@
 package com.example.myapplication.adapters
 
-import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.models.Student
+import com.example.myapplication.utils.Utils.setImageViewProfilePicture
 
 class StudentAdapter(
-    private val students: List<Student>,
+    private var students: List<Student>,
     private val onItemClick: (Student) -> Unit
 ) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
@@ -23,31 +23,31 @@ class StudentAdapter(
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
         val student = students[position]
-        holder.bind(student, onItemClick)
+        holder.init(student, onItemClick)
+    }
+
+    fun updateData(newStudents: List<Student>) {
+        students = newStudents
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int = students.size
 
-    class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameTextView: TextView = itemView.findViewById(R.id.studentName)
         private val idTextView: TextView = itemView.findViewById(R.id.studentId)
-        private val phoneTextView: TextView = itemView.findViewById(R.id.studentPhone)
-        private val addressTextView: TextView = itemView.findViewById(R.id.studentAddress)
         private val checkBox: CheckBox = itemView.findViewById(R.id.studentCheckBox)
         private val pictureImageView: ImageView = itemView.findViewById(R.id.studentPicture)
 
-        fun bind(student: Student, onItemClick: (Student) -> Unit) {
+        fun init(student: Student, onItemClick: (Student) -> Unit) {
             nameTextView.text = student.name
             idTextView.text = student.id
-            phoneTextView.text = student.phone
-            addressTextView.text = student.address
             checkBox.isChecked = student.isChecked
             checkBox.setOnCheckedChangeListener { _, isChecked ->
                 student.isChecked = isChecked
             }
-            // Load the picture from the local file
-            val bitmap = BitmapFactory.decodeFile(student.pictureUrl)
-            pictureImageView.setImageBitmap(bitmap)
+            // Load the picture from the constant image resource
+            setImageViewProfilePicture(pictureImageView)
 
             itemView.setOnClickListener { onItemClick(student) }
         }

@@ -10,8 +10,7 @@
         layout="@layout/toolbar" />
 
     <LinearLayout
-        style="@style/LinearLayoutOuterStyle"
-        android:layout_below="@id/toolbar">
+        style="@style/LinearLayoutOuterStyle">
 
         <ImageView
             android:id="@+id/studentPicture"
@@ -31,7 +30,8 @@
             <EditText
                 android:id="@+id/studentId"
                 style="@style/EditTextStyle"
-                android:hint="@string/student_id_hint" />
+                android:hint="@string/student_id_hint"
+                android:inputType="number"/>
         </LinearLayout>
 
         <LinearLayout
@@ -46,7 +46,8 @@
             <EditText
                 android:id="@+id/studentName"
                 style="@style/EditTextStyle"
-                android:hint="@string/student_name_hint" />
+                android:hint="@string/student_name_hint"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +62,8 @@
             <EditText
                 android:id="@+id/studentPhone"
                 style="@style/EditTextStyle"
-                android:hint="@string/student_phone_hint" />
+                android:hint="@string/student_phone_hint"
+                android:inputType="phone"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +78,8 @@
             <EditText
                 android:id="@+id/studentAddress"
                 style="@style/EditTextStyle"
-                android:hint="@string/student_address_hint" />
+                android:hint="@string/student_address_hint"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
