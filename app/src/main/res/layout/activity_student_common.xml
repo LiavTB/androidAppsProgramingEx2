@@ -30,7 +30,8 @@
                 android:id="@+id/studentId"
                 style="@style/EditTextStyle"
                 android:hint="@string/student_id_hint"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:maxLength="10"/>
         </LinearLayout>
 
         <LinearLayout
@@ -62,7 +63,8 @@
                 android:id="@+id/studentPhone"
                 style="@style/EditTextStyle"
                 android:hint="@string/student_phone_hint"
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:maxLength="10"/>
         </LinearLayout>
 
         <LinearLayout
