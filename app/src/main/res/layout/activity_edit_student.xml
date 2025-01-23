@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditStudentActivity">
+
+    <include layout="@layout/activity_student_common" />
+
+    <LinearLayout
+        style="@style/LinearLayoutOfButtonsStyle">
+
+        <include
+            android:id="@+id/cancel_button"
+            layout="@layout/cancel_button_layout"
+            />
+        <include
+            android:id="@+id/delete_button"
+            layout="@layout/delete_button_layout"
+            />
+        <include
+            android:id="@+id/save_button"
+            layout="@layout/save_button_layout"
+            />
+    </LinearLayout>
+</RelativeLayout>

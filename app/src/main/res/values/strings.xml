@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="add_student">Add Student</string>
+
+    <string name="student_id_title">ID:</string>
+    <string name="student_id_hint">ID</string>
+    <string name="student_name_title">Name:</string>
+    <string name="student_name_hint">Name</string>
+    <string name="student_phone_title">Phone:</string>
+    <string name="student_phone_hint">Phone</string>
+    <string name="student_address_title">Address:</string>
+    <string name="student_address_hint">Address</string>
+    <string name="student_checked">Checked</string>
+
+    <string name="new_student_page_title">New Students</string>
+    <string name="student_list_page_title">Students List</string>
+    <string name="student_details_page_title">Students Details</string>
+    <string name="edit_student_page_title">Edit Students</string>
+
+    <string name="edit_student">Edit Student</string>
+    <string name="cancel">CANCEL</string>
+    <string name="delete">DELETE</string>
+    <string name="save">SAVE</string>
+    <string name="student_picture">student picture</string>
+    <string name="edit">EDIT</string>
+</resources>

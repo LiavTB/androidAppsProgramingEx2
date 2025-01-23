@@ -1,0 +1,13 @@
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ToolbarStyle">
+
+    <ImageButton
+        android:id="@+id/return_button"
+        style="@style/ReturnButtonStyle"
+        android:src="@drawable/ic_return" />
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        style="@style/ToolbarTitleStyle" />
+
+</androidx.appcompat.widget.Toolbar>
