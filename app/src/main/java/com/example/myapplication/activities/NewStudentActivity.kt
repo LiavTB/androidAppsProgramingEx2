@@ -3,6 +3,7 @@ package com.example.myapplication.activities
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -32,7 +33,8 @@ class NewStudentActivity : AppCompatActivity() {
             val name = findViewById<EditText>(R.id.studentName).text.toString()
             val phone = findViewById<EditText>(R.id.studentPhone).text.toString()
             val address = findViewById<EditText>(R.id.studentAddress).text.toString()
-            val student = Student(id, name, phone, address)
+            val checkBox = findViewById<CheckBox>(R.id.studentCheckBox)
+            val student = Student(id, name, phone, address, checkBox.isChecked)
             StudentRepository.addStudent(student)
             Toast.makeText(this, "Student added successfully", Toast.LENGTH_SHORT).show()
             finish()
