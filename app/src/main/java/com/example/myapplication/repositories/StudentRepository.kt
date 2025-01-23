@@ -3,7 +3,7 @@ package com.example.myapplication.repositories
 import com.example.myapplication.models.Student
 
 object StudentRepository {
-    private val students = mutableListOf<Student>(Student("1", "John Doe", "1234567890", "123 Main St", false))
+    private val students = mutableListOf<Student>()
 
     fun getAllStudents(): List<Student> = students
 
